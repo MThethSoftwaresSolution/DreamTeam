@@ -1,6 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
 import { MainService } from './services/api';
-import { chartData } from './services/datasource';
 import {
   ChartComponent,
   ApexAxisChartSeries,
@@ -57,7 +56,6 @@ export class AppComponent {
     this.priceCodeName = priceCode;
 
     this.prices = [];
-    this.stockchartData = chartData;
 
     this.service.getData(priceCode)
       .subscribe((resp: any) => {
